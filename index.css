@@ -1,0 +1,87 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: sienna;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: tan;
+    animation-name: h1;
+    font-size: 40px;
+    animation-duration: 2s;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    animation-name: h2;
+    font-size: 25px;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.bolinha{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    animation-name: bolinha;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    margin-top: 200px;
+}
+
+
+@keyframes h1 {
+    0%{
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes h2 {
+    0%{
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes bolinha {
+    0%{
+        transform: translateX(-100vh);
+        background-color: white;
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(100vh);
+        background-color: white;
+        opacity: 0;
+    }
+}
